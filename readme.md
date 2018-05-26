@@ -58,3 +58,14 @@ The development HTTP server is used currently, but in production we can configur
 # Postman
 
 Please import `Lendingblock.postman_collection.json` in Postman to manually run some tests on the endpoints. The URLs are pointing to the port 5000 exposed by the Docker container.
+
+# Final note
+
+I was not sure what you meant by:
+
+"Handling of orders which cross mid-price (for example buy 200 @ 20 and sell 50 @ 19)". I think it might be related to the logic used to aggregate the orderbook.
+
+Any further clarifications are welcome.
+
+Thank you,
+Tudor

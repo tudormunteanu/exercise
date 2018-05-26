@@ -15,10 +15,11 @@ class MockRequest:
 
 class MockResponse:
     """
-    MockResponse class has the only purpose to
+    The purpose of MockResponse is to
     simulate a more common pattern used by Django or Flask.
     Otherwise, returning a tuple would have worked fine.
     """
+
 
     def __init__(self, status_code, content):
         self.content = content
@@ -26,7 +27,9 @@ class MockResponse:
 
 
 class FakeClient:
-
+    """
+    TODO: Implement proper URLs for requests
+    """
 
     def _make_request(self, method, req):
         return MockResponse(*method(req))

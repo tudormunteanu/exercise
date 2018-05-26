@@ -1,5 +1,5 @@
 # Lendingblock Python Exercise
-by Tudor Munteanu (tudor@mowostudios.com)
+by [Tudor Munteanu](mailto:tudor@mowostudios.com)
 
 # The App
 
@@ -32,7 +32,7 @@ python3 exchange_test.py
 Due to the very rudimentary HTTP server, URL routing is not as powerful as in Flask or
 Django. This can be improved, if required.
 
-Since no database is used, the Storage class is only storing data in memory. Once the server is shut down, the created orders disappear.
+Since no persistent database is used, the Storage class is only storing data in memory. Once the server is shut down, the created orders disappear.
 
 # Docker
 

@@ -1,0 +1,107 @@
+{
+	"info": {
+		"name": "Lendingblock",
+		"_postman_id": "7ff1f9c3-51f9-62ab-4ad0-98c9c8778e3d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/get_order",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\": \"buy\",\"price\": 14,\"size\": 1001}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/get_order/252",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"get_order",
+						"252"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/get_orderbook",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\": \"buy\",\"price\": 14,\"size\": 1001}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/get_orderbook",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"get_orderbook"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/create_order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\": \"buy\",\"price\": 14,\"size\": 1001}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/create_order",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"create_order"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

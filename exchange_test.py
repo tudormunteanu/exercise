@@ -3,7 +3,6 @@ from exchange import storage
 from models import SellOrder, BuyOrder, Storage, Orderbook
 import unittest
 import json
-import mock
 
 
 class MockRequest:

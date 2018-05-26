@@ -4,7 +4,7 @@ import re
 import json
 
 PORT = 8081
-SERVER_ADDRESS = ('127.0.0.1', PORT)
+SERVER_ADDRESS = ('0.0.0.0', PORT)
 
 
 class RequestHandler(BaseHTTPRequestHandler):
@@ -33,9 +33,9 @@ class RequestHandler(BaseHTTPRequestHandler):
         content_length = int(self.headers['Content-Length'])
         post_data = self.rfile.read(content_length)
         try:
-            json_data = json.loads(post_data)
+            json_data = json.loads(post_data.decode('utf-8'))
             self.json = json_data
-        except:
+        except Exception as e:
             pass
         if self.path == '/create_order':
             status, res = create_order(self)

@@ -1,9 +1,9 @@
 # Lendingblock Python Exercise
 by [Tudor Munteanu](mailto:tudor@mowostudios.com)
 
-# The App
+# The Service
 
-The intention was to keep the architecture of the app very basic and
+The intention was to keep the architecture of the service very basic and
 have no external dependencies, even though deploying Flask would have been
 much quicker.
 
@@ -12,7 +12,7 @@ a simple HTTP server, so I took this opportunity to dive into this part of Pytho
 
 The logic for the endpoints can be found in `exchange.py`, the data models in `models.py` and misc helpers functions in `helpers.py`.
 
-Start the app with:
+Start the service with:
 ```
 python3 app.py
 ```

@@ -6,6 +6,9 @@ class Order:
 
 
     def __init__(self, price, size):
+        """
+        self.date added for possible future use cases.
+        """
         self.price = price
         self.date = datetime.utcnow()
         self.size = size
@@ -64,6 +67,9 @@ class Orderbook:
             for i, v in enumerate(orders):
                 if order.price < v.price:
                     index = i - 1
+                    break
+            if index < 0:
+                index = 0
             orders.insert(index, order)
 
     def _agregate_orders(self, orders):

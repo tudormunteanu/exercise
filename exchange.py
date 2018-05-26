@@ -7,26 +7,25 @@ storage = Storage()
 orderbook = storage.orderbook
 
 
-def create_order(data_in):
+def create_order(request):
 
-
+    data_in = request.json
     keys = sorted(list(data_in.keys()))
     if keys != ['price', 'size', 'type']:
         output = {
             "error": "Missing keys",
         }
-        return json.dumps(output)
+        return 400, json.dumps(output)
     _class = get_oder_class(data_in['type'])
     order = _class(data_in['price'], data_in['size'])
     orderbook.add_order(order)
     output = {
-        "order_id": 123
+        "order_id": order.id
     }   
-    return json.dumps(output)
+    return 200, json.dumps(output)
 
 
-def get_order(id):
-
+def get_order(request, id):
 
     for o in storage.orderbook.get_all_orders():
         if o.id == id:
@@ -38,18 +37,15 @@ def get_order(id):
         output = {
             "order": vars(order)
         }
-    else:
-        output = {
-            "error": "No such order."
-        }
-    return json.dumps(output, default=str)
+        return 200, json.dumps(output, default=str)        
+    output = {
+        "error": "No such order."
+    }
+    return 404, json.dumps(output, default=str)
 
 
-def get_orderbook():
+def get_orderbook(request):
     
 
     output = storage.orderbook.aggregate()
-    return json.dumps(output)
-
-
-
+    return 200, json.dumps(output)

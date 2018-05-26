@@ -10,6 +10,12 @@ orderbook = storage.orderbook
 def create_order(data_in):
 
 
+    keys = sorted(list(data_in.keys()))
+    if keys != ['price', 'size', 'type']:
+        output = {
+            "error": "Missing keys",
+        }
+        return json.dumps(output)
     _class = get_oder_class(data_in['type'])
     order = _class(data_in['price'], data_in['size'])
     orderbook.add_order(order)
@@ -41,10 +47,9 @@ def get_order(id):
 
 def get_orderbook():
     
-    output = {
 
-    }
-    return json.dumps(output, default=str)
+    output = storage.orderbook.aggregate()
+    return json.dumps(output)
 
 
 

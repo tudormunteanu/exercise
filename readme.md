@@ -65,7 +65,7 @@ There might be some CORS issues that are not handled by default in this exercise
 
 I was not sure what you meant by:
 
-"Handling of orders which cross mid-price (for example buy 200 @ 20 and sell 50 @ 19)". I think it might be related to the logic used to aggregate the orderbook.
+"Handling of orders which cross mid-price (for example buy 200 @ 20 and sell 50 @ 19)". I think it might be related to the logic used to aggregate the orderbook."
 
 Any further clarifications are welcome.
 

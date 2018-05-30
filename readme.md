@@ -3,12 +3,13 @@ by [Tudor Munteanu](mailto:tudor@mowostudios.com)
 
 # The Service
 
+I have always been curious about using the standard `http` module to run 
+a simple HTTP server, so I took this opportunity to dive into this part of 
+the Python standard libs.
+
 The intention was to keep the architecture of the service very basic and
 have no external dependencies, even though deploying Flask would have been
 much quicker.
-
-I have always been curious about using the standard `http` module to run 
-a simple HTTP server, so I took this opportunity to dive into this part of Python.
 
 The logic for the endpoints can be found in `exchange.py`, the data models in `models.py` and misc helpers functions in `helpers.py`.
 
